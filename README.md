@@ -1,4 +1,4 @@
-# Personal Portfolio Website Code For https://andrew.harrison.nu
+# Professional Resume Website Sources https://Andrew.Harrison.nu
 
 ## Project Structure
 
@@ -38,10 +38,10 @@ Clone the repo and install it's dependencies using `bun` or `npm`:
 bun i
 ```
 
-Build the site structure with the `prod` command:
+Build the site structure with the `build` command:
 
 ```
-bun run prod
+bun run build
 ```
 
 Rebuild just the css with the `css` command:
@@ -49,15 +49,15 @@ Rebuild just the css with the `css` command:
 ```
 bun run css
 ```
-Increment the package version and sitemap date with the `bump` command:
+Increment the package version and sitemap date with the `release` command:
 
 ```
-bun run bump
+bun run release
 ```
 
 ## Dependencies
 
-This site is custom coded with the the following tools and libraries:
+This site is programmed with the the following tools and libraries:
 
 - [Bun](https://bun.sh)
 - [TailwindCSS](https://tailwindcss.com)
