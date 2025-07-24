@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+		 __                  __
+		( /| _  __/_ _      ( /_/_  _ _ o_ _  _
+		 /-|/ )(_// (/_((/   / /(_\/ / /_)(_)/ )
+
+       A n d r e w . H a r r i s o n . n u
+	-->
+	<head>
+		<title>Andrew Harrison</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Andrew Harrison">
+		<meta name="description" content="The Professional Portfolio and Resume of Andrew Harrison">
+		<meta name="keywords" content="Andrew, Harrison, Andrew Harrison, Pittsburgh, Programmer, Security, Resume, Portfolio, Hire">
+		<meta name="theme-color" content="#222222">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="apple-touch-icon" sizes="180x180" href="/ui/i/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/ui/i/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/ui/i/favicon-16x16.png">
+		<link rel="manifest" href="/ui/i/site.webmanifest">
+		<link rel="author" href="/humans.txt">
+		<link rel="shortcut icon" href="/ui/i/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/ui/site.css">
+	</head>
+	<body>
+		<nav id="nav">
+			<div class="navpad">
+				<div class="navinner">
+					<button aria-label="toggle sidebar" id="show">
+						<svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" /><circle cx="6" cy="10" r="2" /><line x1="6" y1="4" x2="6" y2="8" /><line x1="6" y1="12" x2="6" y2="20" /><circle cx="12" cy="16" r="2" /><line x1="12" y1="4" x2="12" y2="14" /><line x1="12" y1="18" x2="12" y2="20" /><circle cx="18" cy="7" r="2" /><line x1="18" y1="4" x2="18" y2="5" /><line x1="18" y1="9" x2="18" y2="20" /></svg>
+					</button>
+					<button aria-label="Close sidebar" id="hide" class="hidden">
+						<svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" /><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+					</button>
+					<div class="row">
+						<img src="/ui/i/logo.png">
+					</div>
+					<div class="row">
+						<ul id="toc">
+							<li><span><a href="#about">About Me</a></span></li>
+							<li><span><a href="#skills">Skills</a></span></li>
+							<li><span><a href="#education">Education</a></span></li>
+							<li><span><a href="#employment">Employment</a></span></li>
+							<li><span><a href="#opensource">Open Source</a></span></li>
+							<li><span><a href="#references">References</a></span></li>
+							<li><span><a href="#contact">Contact</a></span></li>
+						</ul>
+					</div>
+					<div class="row">
+						<button class="darkmode" title="Toggle dark mode" aria-pressed="true">
+							<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><mask class="moon" id="moon-mask"><rect x="0" y="0" width="100%" height="100%" fill="white" /><circle cx="0" cy="10" r="6" fill="black" /></mask><circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/><g class="sun-beams" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g></svg>
+						</button>
+					</div>
+					<cite><b>Night Mode</b><i>Light Mode</i></cite>
+				</div>
+			</div>
+		</nav>
+		<div id="wrap">
+			<main>
+				<header>
+					<h1 id="hero"><img src="/ui/i/logo.png"></h1>
+					<h1>Andrew Harrison</h1>
+					<svg width="100%" height="100%" viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0,8.566l0,-8.544l1200,0c0,2.154 0,4.294 -0.367,6.857c-0.811,1.687 -1.315,2.941 -1.69,4.214c-8.822,29.948 -33.553,50.516 -72.67,62.503c-30.025,9.201 -61.88,12.394 -94.104,12.566c-89.821,0.48 -179.651,0.088 -269.474,0.519c-21.413,0.103 -42.948,1.338 -64.175,3.382c-25.909,2.495 -48.734,10.178 -66.027,24.827c-9.943,8.424 -17.341,17.944 -23.528,27.973c-2.495,4.043 -4.866,8.125 -7.275,12.159c-4.67,-7.259 -8.992,-14.446 -13.851,-21.443c-15.987,-23.026 -41.264,-37.633 -76.862,-42.86c-23.308,-3.423 -46.921,-4.135 -70.59,-4.16c-84.66,-0.088 -169.321,-0.027 -253.981,-0.098c-32.082,-0.027 -63.881,-1.916 -94.754,-8.668c-43.958,-9.614 -74.353,-29.104 -87.188,-61.284c-1.063,-2.666 -2.305,-5.296 -3.464,-7.943Z" transform="scale(1,-1) translate(0,-160)" />
+					</svg>
+				</header>
+				<a name="about"></a>
+				<div id="aboutme">
+					<blockquote>
+						<h2 id="about">About Me</h2>
+						<p>UNIX wizard and programmer with deep expertise in classical, functional, and procedural programming. Rapid learner and effective communicator, able to explain complex logic to diverse audiences—usually with diagrams.</p>
+						<p>Passionate about open source: studying, contributing, and learning from community logic and algorithms deepens my understanding and perspective on my own code.</p>
+						<p>For the past decade, I’ve specialized in security—combining red/blue team (offensive/defensive) skills with extensive experience in secure software development, architecture, code review, and team training.
+							<img src="/ui/i/signature.png"></p>
+					</blockquote>
+					<div class="selfie"><img src="/ui/i/me.jpg" alt="Andrew Harrison" /></div>
+				</div>
+				<a name="skills"></a>
+				<div id="madskills">
+					<hr />
+					<h2 id="skills">Skills</h2>
+					<div class="cols">
+						<div class="group indigo">
+							<div class="bg"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="tech"></i></div>
+										<div class="title">Technical Proficiency</div>
+									</div>
+									<ul class="desc">
+										<li>Secure Coding</li>
+										<li>Secure Architecture, System Design, &amp; Implementation</li>
+										<li>Network &amp; Cloud Security</li>
+										<li>Kubernetes / Docker Hardening</li>
+										<li>Mobile &amp; Web Application Penetration Testing</li>
+										<li>Network Segmentation Testing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="group purple">
+							<div class="bg-"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="leader"></i></div>
+										<div class="title">Security Leadership</div>
+									</div>
+									<ul class="desc">
+										<li>Cybersecurity Strategy</li>
+										<li>Information Governance</li>
+										<li>Compliance Frameworks</li>
+										<ul class="nested"><li>PCI DSS v4.0</li><li>ISO 27001:2022</li><li>SOC II</li></ul>
+										<li>Risk Assessment &amp; Management</li>
+										<li>Security Policy Development</li>
+										<li>Incident Response</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="group cyan">
+							<div class="bg"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="pro"></i></div>
+										<div class="title">Professional Competencies</div>
+									</div>
+									<ul class="desc">
+										<li>Multitasking &amp; Problem-Solving</li>
+										<li>Documentation &amp; SOP Creation</li>
+										<li>Management &amp; Team Leadership</li>
+										<li>Team Training</li>
+										<li>Effective Communication</li>
+										<li>Commitment &amp; Professional Attitude</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group code green">
+						<div class="bg"></div>
+						<div class="inner">
+							<div class="flex-vert">
+								<div class="icon-row">
+									<div class="icon"><i class="programming"></i></div>
+									<div class="title">Programming</div>
+								</div>
+								<em>Highly Proficient In:</em>
+								<ul class="desc">
+									<li><strong>Markup:</strong> HTML, XML, SVG</li>
+									<li><strong>Styling:</strong> CSS, Sass, Stylus</li>
+									<li><strong>ECMA Script Languages:</strong> ActionScript, JavaScript, TypeScript</li>
+									<li><strong>Shell Scripting:</strong> POSIX Sh, Bash, Zsh, Perl</li>
+									<li><strong>Server-Side:</strong> PHP, Node.js</li>
+									<li><strong>Regular Expressions:</strong> PCRE, FDA</li>
+									<li><strong>Structured Queries:</strong> PMS/SQL, Transact-SQL, PostgreSQL, PL/SQL, OQL, Query-DSL</li>
+									<li><strong>Embedded:</strong> Lua, PICO-8, TCL</li>
+									<li><strong>Others:</strong> Python, AWK, C, C#, C++, HCL, Java, Visual Basic</li>
+								</ul>
+								<em>Working Knowledge / <i>Dangerous</i> In:</em>
+								<p>Rust, M, Ruby, Swift, Pascal, Delphi, R, Orange, Assembly, Groovy</p>
+							</div>
+						</div>
+					</div>
+					<div class="cols">
+						<div class="group indigo">
+							<div class="bg"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="nix"></i></div>
+										<div class="title">Operating Systems</div>
+									</div>
+									<ul class="desc">
+										<li>Linux (<strong>Debian, Alpine, RPM, Pacman, Gentoo, Void, CRUX</strong> based distros)</li>
+										<li>MacOS</li>
+										<li>Windows</li>
+										<li>OpenBSD</li>
+										<li>Android</li>
+										<li>iOS/iPadOS</li>
+										<li>DD/OpenWRT</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="group purple">
+							<div class="bg"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="cloud"></i></div>
+										<div class="title">Cloud Platforms</div>
+									</div>
+									<ul class="desc">
+										<li>AWS</li>
+										<li>Azure</li>
+										<li>GCP</li>
+										<li>DigitalOcean</li>
+										<li>AliCloud</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="group cyan">
+							<div class="bg"></div>
+							<div class="inner">
+								<div class="flex-vert">
+									<div class="icon-row">
+										<div class="icon"><i class="tools"></i></div>
+										<div class="title">Favorite Tools</div>
+									</div>
+									<ul class="desc">
+										<li>NeoVim</li>
+										<li>Photoshop</li>
+										<li>Terraform</li>
+										<li>TailwindCSS</li>
+										<li>Nginx</li>
+										<li>Bun</li>
+										<li>HTMX</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a name="education"></a>
+				<div id="edu">
+					<hr />
+					<a name="education"></a>
+					<h2 id="education">Education</h2>
+					<strong>Bachelors, Computer Science / Graphic Design</strong><br />
+					<em>Robert Morris University, 2004–2006</em>
+					<ul>
+						<li>Graduated Magna Cum Laude</li>
+						<li>A+ certification</li>
+						<li>N+ certification</li>
+					</ul>
+				</div>
+				<div id="jobs">
+					<hr />
+					<a name="employment"></a>
+					<h2 id="employment">Employment History</h2>
+					<div class="row">
+						<div class="lcol">
+							<div><i id="bb"></i></div>
+							<h3 class="job">Branding Brand</h3>
+							<div>
+								<strong class="title">Director of Security</strong>
+								<em class="years">2014–Present</em>
+							</div>
+						</div>
+						<div class="rcol">
+							<ul>
+								<li>Achieved and maintained PCI DSS v4 (Lvl 1), ISO 27001:2002, and SOC2 compliance frameworks.</li>
+								<li>Ensured compliance with data privacy laws as acting CISSO.</li>
+								<li>Helped design and implement a PCI compliant CDE, including CI/CD pipelines and Kubernetes cluster/container hardening.</li>
+								<li>Configured and monitored IDS/IPS, firewalls, and other security tools to protect our network.</li>
+								<li>Conducted network segmentation and web application penetration testing.</li>
+								<li>Audited access controls and collaborated on detailed incident response and SOP documentation.</li>
+								<li>Led code review and validation for all teams across 6+ languages (Web, Native mobile, CI/CD, etc).</li>
+								<li>Trained staff on cybersecurity best practices with custom-developed training software and curriculum.</li>
+								<li>Founded and led our Information Risk Council; to manage our risk processes and mitigation strategies.</li>
+								<li>Performed log analysis, CVE review, alert triage, DFIR, project management, and reporting.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="lcol">
+							<div><i  id="loyal"></i></div>
+							<h3 class="job">LoyalTree</h3>
+							<div>
+								<strong class="title">Web Application Engineer</strong>
+								<em class="years">2012–2014</em>
+							</div>
+						</div>
+						<div class="rcol">
+							<ul>
+								<li>Created responsive websites for mobile and Point Of Sale systems using HTML5 and custom web fonts.</li>
+								<li>Developed backend analytics website correlating item-level POS data and app user demographics.</li>
+								<li>Developed business configuration interfaces for loyalty programs and customer engagement.</li>
+								<li>Built RESTful APIs with my custom framework for mobile and POS integrations.</li>
+								<li>Managed Jenkins CI servers for automated testing, documentation, and API deployments via Git.</li>
+							</ul>
+							<a href="#_" class="lightbox">
+								<img class="thumb" src="/ui/i/thumb/loyaltree6.png" data-img="/ui/i/proj/loyaltree6.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree2.png" data-img="/ui/i/proj/loyaltree1.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree1.png" data-img="/ui/i/proj/loyaltree2.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree7.png" data-img="/ui/i/proj/loyaltree7.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree4.png" data-img="/ui/i/proj/loyaltree4.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree5.png" data-img="/ui/i/proj/loyaltree5.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree3.png" data-img="/ui/i/proj/loyaltree3.png">
+								<img class="thumb" src="/ui/i/thumb/loyaltree8.png" data-img="/ui/i/proj/loyaltree8.png">
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="lcol">
+							<div><i id="cet"></i></div>
+							<h3 class="job">Center for Educational Technologies</h3>
+							<div>
+								<strong class="title">Software Developer</strong>
+								<em class="years">2006–2012</em>
+							</div>
+						</div>
+						<div class="rcol">
+							<ul>
+								<li>Developed AJAX web apps using ASP.NET C#, PHP, JavaScript, and Flash.</li>
+								<li>Maintained the full software lifecycle: design, development, deployment, and testing.</li>
+								<li>Worked with content writers and subject matter experts to create project plans and technical implementations.</li>
+								<li>Projects:</li>
+							</ul>
+							<ul class="nested">
+								<li>
+									<strong>WV Storm:&nbsp;</strong>NOAA-funded, teaching kids to interpret weather maps and issue warnings.
+								</li>
+								<li>
+									<strong>Selene:&nbsp;</strong>NSF-funded, award-winning educational game about lunar formation and geology.
+								</li>
+								<li>
+									<strong>IUOE/RDD:&nbsp;</strong>OSHA-funded, online compliance training modules for demolition &amp; hazmat fields.
+								</li>
+								<li>
+									<strong>B.L.i.S.S:&nbsp;</strong>NASA-funded, iPad space farming &amp; resource management simulator/game.
+								</li>
+							</ul>
+							<a href="#_" class="lightbox">
+								<img class="thumb" src="/ui/i/thumb/wvstorm1.png" data-img="/ui/i/proj/wvstorm1.png">
+								<img class="thumb" src="/ui/i/thumb/wvstorm2.png" data-img="/ui/i/proj/wvstorm2.png">
+								<img class="thumb" src="/ui/i/thumb/selene1.png" data-img="/ui/i/proj/selene1.png">
+								<img class="thumb" src="/ui/i/thumb/selene2.png" data-img="/ui/i/proj/selene2.png">
+								<img class="thumb" src="/ui/i/thumb/iuoe1.png" data-img="/ui/i/proj/iuoe1.png">
+								<img class="thumb" src="/ui/i/thumb/iuoe2.png" data-img="/ui/i/proj/iuoe2.png">
+								<img class="thumb" src="/ui/i/thumb/bliss1.png" data-img="/ui/i/proj/bliss1.png">
+								<img class="thumb" src="/ui/i/thumb/bliss2.png" data-img="/ui/i/proj/bliss2.png">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="sauce">
+					<hr />
+					<a name="opensource"></a>
+					<h2 id="oss">Open Source Contributions</h2>
+					<ul>
+						<li>2,500+ commits across public repositories, active since 2010</li>
+						<li>5,000+ stars and 700+ followers on GitHub</li>
+						<li><strong>Github Arctic Code Vault Contributor</strong></li>
+						<li>Notable projects:</li>
+					</ul>
+					<ul class="nested">
+						<li><a href="https://github.com/xero/dotfiles" target="_blank"
+						>Dotfiles</a>: My custom Linux config files <em>(2,100+ stars)</em>
+						</li>
+						<li><a href="https://www.windows98.website" target="_blank"
+						>Windows98.website</a>: Experience Windows 98 as a nostalgic web-demo.
+						</li>
+						<li><a href="https://backrooms.quest" target="_blank"
+						>Backrooms.quest</a>: A spooky choose your own adventure.
+						</li>
+						<li><a href="https://0w.nz/random" target="_blank">0w.nz</a>:
+							Randomized "art programming" sketch book
+						</li>
+					</ul>
+					<ul>
+						<li>All repositories mirrored on:</li>
+					</ul>
+					<ul class="nested">
+						<li><a href="https://github.com/xero" target="_blank"><i>Github&nbsp;</i><b>https://github.com/xero</b></a></li>
+						<li><a href="https://gitlab.com/x" target="_blank"><i>GitLab&nbsp;</i><b>https://gitlab.com/x</b></a></li>
+						<li><a href="https://git.sr.ht/~xero" target="_blank"><i>SourceHut&nbsp;</i><b>https://git.sr.ht/~xero</b></a></li>
+						<li><a href="https://code.x-e.ro" target="_blank"><i>Personal Site&nbsp;</i><b>https://code.x-e.ro</b></a></li>
+					</ul>
+					<input type="button" value="Load Recent Github Activity &#xf253" id="loadact">
+					<div id="activity" class="hidden">Querying the Github API... <i class="spinner"></i></div>
+				</div>
+				<a name="references"></a>
+				<div id="references">
+					<hr/>
+					<h2 id="refs">References</h2>
+					<p>References available upon request, but you can view my public recommendations on <a href="https://linkedin.com/in/andrewxeroharrison/" target="_blank">Linked<i id="linkedin"></i></a></p>
+				</div>
+				<a name="contact"></a>
+				<div id="contact">
+					<hr/>
+					<h2 id="mail">Contact</h2>
+					<div class="split">
+						<form id="sendmail">
+							<input type="email" placeholder="e@mail.com" name="from" minlength="3" maxlength="64" required>
+							<textarea placeholder="Your message" name="msg" required></textarea>
+							<input type="submit" value="Send">
+						</form>
+						<div class="ico">
+							<div class="row" id="email"> &nbsp;&#x61;&#x6E;&#x64;&#x72;&#x65;&#x77;&#x40;&#x68;&#x61;&#x72;&#x72;&#x69;&#x73;&#x6F;&#x6E;&#x2E;&#x6E;&#x75;</div>
+							<div class="row" id="phone"> &nbsp;&#x28;&#x34;&#x31;&#x32;&#x29;&#x20;&#x32;&#x33;&#x30;&#x2D;&#x33;&#x38;&#x30;&#x36;</div>
+							<div class="row" id="place"> &nbsp;Pittsburgh, PA. USA</div>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<svg width="100%" height="100%" viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0,8.566l0,-8.544l1200,0c0,2.154 0,4.294 -0.367,6.857c-0.811,1.687 -1.315,2.941 -1.69,4.214c-8.822,29.948 -33.553,50.516 -72.67,62.503c-30.025,9.201 -61.88,12.394 -94.104,12.566c-89.821,0.48 -179.651,0.088 -269.474,0.519c-21.413,0.103 -42.948,1.338 -64.175,3.382c-25.909,2.495 -48.734,10.178 -66.027,24.827c-9.943,8.424 -17.341,17.944 -23.528,27.973c-2.495,4.043 -4.866,8.125 -7.275,12.159c-4.67,-7.259 -8.992,-14.446 -13.851,-21.443c-15.987,-23.026 -41.264,-37.633 -76.862,-42.86c-23.308,-3.423 -46.921,-4.135 -70.59,-4.16c-84.66,-0.088 -169.321,-0.027 -253.981,-0.098c-32.082,-0.027 -63.881,-1.916 -94.754,-8.668c-43.958,-9.614 -74.353,-29.104 -87.188,-61.284c-1.063,-2.666 -2.305,-5.296 -3.464,-7.943Z" />
+					</svg>
+					<span id="year"></span>
+				</footer>
+			</main>
+		</div>
+		<dialog id="dialog"><img src=""></dialog>
+		<script src="/ui/app.js"></script>
+	</body>
+</html>
