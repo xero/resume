@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "description": "Personal Portfolio",
   "scripts": {
-		"prod": "rm -rf ./dist; mkdir ./dist; cp -r ./src/* ./dist; rm ./dist/raw.css; bun run css",
-    "css": "bun ./node_modules/postcss-cli/index.js -o ./dist/ui/site.css ./src/raw.css; sed -i 's!tailwindcss.*com !\\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\\n!' ./dist/ui/site.css"
+    "prod": "rm -rf ./dist; mkdir ./dist; cp -r ./src/* ./dist; rm ./dist/raw.css; bun run css",
+    "css": "bun ./node_modules/postcss-cli/index.js -o ./dist/ui/site.css ./src/raw.css; sed -i 's!tailwindcss.*com !\\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\\n!' ./dist/ui/site.css",
+    "bump": "sed -i \"s!.lastmod.*lastmod.!<lastmod>$(date +%Y-%m-%d)</lastmod>!\" src/sitemap.xml; npm version patch"
   },
   "author": "Andrew Harrison",
   "license": "CC0-1.0",

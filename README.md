@@ -6,15 +6,15 @@
 
 The project root contains configuration files for the development and build environment, as well as, two folders.
 
-- **Sources** `src`: contains the project source files, including images, fonts, scripts, and style sheets.
-- **Distribution*** `dist`: (generated at build time) contains the complete production website including compiled and minified files.
+- **Sources** `src/` contains the project source files, including images, fonts, [scripts](src/ui/app.js), and [style sheets](src/raw.css).
+- **Distribution** `dist/` (generated at build time) the complete, compiled and minified, production files.
 
 Here's an overview of the file hierarchy:
 ```
 .
 ├── bun.lockb           -> Dependency versioning
 ├── dist/               -> Generated files location
-│   └── ui/             -> Website assets
+│   └── ui/             -> Development website assets
 │       └── site.css    -> Minified style sheets
 ├── package.json        -> Packages and scripts
 ├── package-lock.json   -> Dependency lockfile
