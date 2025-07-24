@@ -1,8 +1,6 @@
-# Andrew Harrison
+# Personal Portfolio Website Code For https://andrew.harrison.nu
 
-> ## Personal Portfolio Website Code For https://andrew.harrison.nu
-
-### Project Structure
+## Project Structure
 
 The project root contains configuration files for the development and build environment, as well as, two folders.
 
@@ -32,9 +30,9 @@ Here's an overview of the file hierarchy:
 └── tailwind.config.js  -> TailwindCSS configuration
 ```
 
-### Building
+## Building
 
-Clone the repo and build it using bun or npm:
+Clone the repo and install it's dependencies using `bun` or `npm`:
 
 ```
 bun i
@@ -51,8 +49,13 @@ Rebuild just the css with the `css` command:
 ```
 bun run css
 ```
+Increment the package version and sitemap date with the `bump` command:
 
-### Dependencies
+```
+bun run bump
+```
+
+## Dependencies
 
 This site is custom coded with the the following tools and libraries:
 
@@ -62,7 +65,7 @@ This site is custom coded with the the following tools and libraries:
 - [PostCSS](http://postcss.org)
 - [Neovim](https://neovim.io)
 
-### License
+## License
 
 **CC0 1.0 Universal (Public Domain Dedication)**
 
