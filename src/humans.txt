@@ -1,0 +1,17 @@
+/* humanstxt.org */
+
+/* Site */
+	standards: html5, css3, javascript
+	software: neovim, git, photoshop, fontforge
+
+/* Designer */
+	author: Andrew Harrison
+	email: Andrew@Harrison.nu
+
+/* Personal Website */
+	site: https://andrew.harriso.nu
+	copyright: creative commons zero / public domain
+	license: http://creativecommons.org/publicdomain/zero/1.0/
+   __                  __
+  ( /| _  __/_ _      ( /_/_  _ _ o_ _  _
+   /-|/ )(_// (/_((/   / /(_\/ / /_)(_)/ )
