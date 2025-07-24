@@ -1,6 +1,6 @@
 {
   "name": "andrew.harrison.nu",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Personal Portfolio",
   "scripts": {
     "build": "rm -rf ./dist; mkdir ./dist; cp -r ./src/* ./dist; rm ./dist/raw.css; bun run style",
