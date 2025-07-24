@@ -1,4 +1,8 @@
-# Professional Resume Website Sources https://Andrew.Harrison.nu
+# Resume Website
+
+![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png)
+
+**[https://Andrew.Harrison.nu](https://Andrew.Harrison.nu)**
 
 ## Project Structure
 
@@ -64,6 +68,10 @@ This site is programmed with the the following tools and libraries:
 - [CssNano](https://cssnano.github.io/cssnano)
 - [PostCSS](http://postcss.org)
 - [Neovim](https://neovim.io)
+
+## TailwindCSS
+
+I don't really like how you're intended to litter your HTML with their style attributes. My approach is to compile their classes into my own using the `@apply` keyword. This allows me to keep my DOM minimal, use my normal css logic style, and get the added benefits of tailwind and their short declarations.
 
 ## License
 
