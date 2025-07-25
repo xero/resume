@@ -4,6 +4,8 @@
 
 **[https://Andrew.Harrison.nu](https://Andrew.Harrison.nu)**
 
+![preview](https://github.com/user-attachments/assets/4a652804-bc97-480b-bb70-dc16a390f123)
+
 ## Project Structure
 
 The project root contains configuration files for the development and build environment, as well as, two folders.
