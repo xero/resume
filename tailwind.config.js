@@ -1,10 +1,7 @@
 module.exports = {
-	darkMode: 'class',
-  theme: {
-    extend: {
-      translate: {
-        '300': '30px',
-      }
-    }
-  },
+  darkMode: 'class',
+  content: [
+    './src/index.html',
+    './src/ui/site.css',
+  ]
 }

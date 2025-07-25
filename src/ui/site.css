@@ -10,6 +10,7 @@
 	--font-sans: hax, ui-sans-serif, system-ui, sans-serif;
 	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 	--color-white: #efefef;
+	--color-polaroid: #e5e5e1;
 	--color-black: #000;
 	--color-lightbox: rgba(0,0,0,0.8);
 	--color-midnight: #0a101a;
@@ -74,6 +75,9 @@ body {
 		@apply
 			transition-all
 			ease-in-out;
+		&:focus {
+			outline: none;
+		}
 	}
 }
 img {
@@ -108,10 +112,14 @@ a:visited {
 			translate-x-[-50%]
 			bg-gradient-to-r from-cyandark to-purp;
 	}
+	&:focus::after,
+	&:focus-within::after,
 	&:hover::after,
 	&.active::after {
 		@apply w-full;
 	}
+	&:focus,
+	&:focus-within,
 	&:hover {
 		@apply
 			text-black
@@ -179,6 +187,10 @@ textarea {
 	&::placeholder {
 		@apply
 		text-gray-600;
+	}
+	&:focus,
+	&:focus-within {
+		@apply border-cyan;
 	}
 }
 input[type=button],
@@ -642,6 +654,11 @@ dialog {
 			w-[120px]
 			md:w-[200px]
 			md:h-[150px];
+		&:focus,
+		&:focus-within,
+		&:hover {
+			@apply border-cyan;
+		}
 	}
 }
 #wrap {
@@ -651,7 +668,6 @@ dialog {
 		flex
 		flex-wrap
 		sm:ml-[8rem];
-	/* sm:bg-red-500 md:bg-green-500 lg:bg-blue-500;*/
 }
 main {
 	@apply
@@ -716,11 +732,12 @@ main {
 				@apply
 					mx-auto
 					border-solid
-					border-white
-					border-t-[10px]
-					border-r-[10px]
+					rounded
+					border-polaroid
+					border-t-[15px]
+					border-r-[15px]
 					border-b-[35px]
-					border-l-[10px]
+					border-l-[15px]
 					shadow-xl;
 			}
 		}
@@ -1326,6 +1343,8 @@ nav {
 						to-lilac
 						dark:from-purpdark
 						dark:to-bluedark;
+					&:focus,
+					&:focus-within,
 					&:hover {
 						@apply
 							shadow-[0_0_10px_10px_var(--glow-green)]
