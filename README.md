@@ -8,30 +8,33 @@
 
 The project root contains configuration files for the development and build environment, as well as, two folders.
 
-- **Sources** `src/` contains the project source files, including images, fonts, [scripts](src/ui/app.js), and [style sheets](src/raw.css).
+- **Sources** `src/` contains the project source files, including images, fonts, [scripts](src/ui/app.js), and [style sheets](src/ui/site.css).
 - **Distribution** `dist/` (generated at build time) the complete, compiled and minified, production files.
 
 Here's an overview of the file hierarchy:
 ```
 .
-├── bun.lockb           -> Dependency versioning
-├── dist/               -> Generated files location
-│   └── ui/             -> Development website assets
-│       └── site.css    -> Minified style sheets
-├── package.json        -> Packages and scripts
-├── package-lock.json   -> Dependency lockfile
-├── postcss.config.js   -> PostCSS configuration
-├── README.md           -> Project documentation
-├── src/                -> Project source files
-│   ├── favicon.ico     -> Website icon
-│   ├── humans.txt      -> Human info
-│   ├── index.html      -> Single page application
-│   ├── raw.css         -> Development style sheet
-│   └── ui/             -> Production Website assets
-│       ├── app.js      -> Application javascript
-│       ├── hax.woff2   -> Customized web-font
-│       └── i/          -> Images folder
-└── tailwind.config.js  -> TailwindCSS configuration
+├── bun.lockb             -> Dependency versioning
+├── dist/                 -> Generated files location
+│   ├── ui/               -> Development website assets
+│   │   ├── app.min.js    -> Minified javascript
+│   │   └── site.min.css  -> Minified style sheets
+│   └── [other files]     -> Copied from `src`
+├── package.json          -> Packages and scripts
+├── package-lock.json     -> Dependency lockfile
+├── postcss.config.js     -> PostCSS configuration
+├── README.md             -> Project documentation
+├── src/                  -> Project source files
+│   ├── favicon.ico       -> Website icon
+│   ├── humans.txt        -> Human info
+│   ├── index.html        -> Single page application
+│   ├── raw.css           -> Development style sheet
+│   └── ui/               -> Production Website assets
+│       ├── app.js        -> Application javascript
+│       ├── hax.woff2     -> Customized web-font
+│       ├── i/            -> Images folder
+│       └── site.css      -> Style sheets
+└── tailwind.config.js    -> TailwindCSS configuration
 ```
 
 ## Building
@@ -48,10 +51,15 @@ Build the site structure with the `build` command:
 bun run build
 ```
 
-Rebuild just the css with the `css` command:
+Rebuild just the css with the `style` command:
 
 ```
-bun run css
+bun run style
+```
+Rebuild just the javascript with the `script` command:
+
+```
+bun run script
 ```
 Increment the package version and sitemap date with the `release` command:
 
