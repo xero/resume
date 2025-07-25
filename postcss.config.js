@@ -1,10 +1,9 @@
 module.exports = {
-	darkMode: 'media',
+  darkMode: "media",
   plugins: [
-		//require('postcss-color-golf'),
-    require('@tailwindcss/postcss'),
-		require('cssnano')({
-			"preset": "advanced"
-		}),
-  ]
-}
+    require("@tailwindcss/postcss"),
+    require("cssnano")({
+      preset: "advanced",
+    }),
+  ],
+};

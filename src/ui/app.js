@@ -22,7 +22,8 @@
 		},
 		// Roman Numerals
 		roman=n=>{
-			let s="",R={M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1};
+			let s="",R={M:1000,CM:900,D:500,CD:400,C:100,
+					XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1};
 			for(let i in R){
 				let q=Math.floor(n/R[i]);
 				n-=q*R[i];
@@ -47,10 +48,10 @@
 		// Github API Parser
 		activity=_=>{
 			const A=(u,t)=>'<a target="_blank" href="'+u+'">'+t+'</a>',
-						M=i=>'<i class="mega '+i+'"></i>',
-						I=i=>'<span class="octicon '+i+'"></span>',
-						W=t=>'<span class="well">'+t+'</span>',
-						Q=q=>'<blockquote>'+q.replace(/`([^`]+)`/g,'<kbd>$1</kbd>')+'</blockquote>',
+				M=i=>'<i class="mega '+i+'"></i>',
+				I=i=>'<span class="octicon '+i+'"></span>',
+				W=t=>'<span class="well">'+t+'</span>',
+				Q=q=>'<blockquote>'+q.replace(/`([^`]+)`/g,'<kbd>$1</kbd>')+'</blockquote>',
 			act=$('activity');
 			t(act,'hidden');
 			fetch('https://api.github.com/users/xero/events')
@@ -151,20 +152,20 @@
 				})
 				.catch(_=>act.innerHTML='<blockquote><i class="warn"></i>Failed loading the Github API</blockquote>');
 		},
-		// Elements
+		// UI Elements
 		nav=$('nav').style,
 		msg=$("dialog"),
 		img=$$("dialog>img"),
 		show=$('show'),
 		hide=$('hide');
-	// Dark Mode
+	// Dark Mode toggle
 	W.matchMedia('(prefers-color-scheme: dark)').matches&&$$('html').classList.add('dark')
 	add($$('.darkmode'),_=>{
 		nt();t($$('html'),'dark')
 		$$('.darkmode')?.setAttribute('aria-pressed',has($$('html'),'dark'))
 		to(_=>m(),sm()?750:1)
 	});
-	// Nav
+	// Navigation
 	m();
 	W.onresize=m;
 	[show,hide,...$$$('nav a')].forEach(i=>add(i,e=>{
@@ -189,5 +190,6 @@
 		W.open(`mailto:${atob('YW5kcmV3QGhhcnJpc29uLm51')
 			}?subject=hello%20from:%20${encodeURI($$('[name=from]').value)
 			}&body=${encodeURI($$('[name=msg]').value)}`)))
+	// Load Activities
 	add($("loadact"),activity);
 })();
