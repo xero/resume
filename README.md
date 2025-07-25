@@ -1,10 +1,9 @@
-# Resume Website
+# Resume Website ⟁ **[https://Andrew.Harrison.nu](https://Andrew.Harrison.nu)**
 
-![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png)
+![preview](https://github.com/user-attachments/assets/14fa73b8-9740-4aba-9219-cfa2ed0eaa71)
 
-**[https://Andrew.Harrison.nu](https://Andrew.Harrison.nu)**
-
-![preview](https://github.com/user-attachments/assets/4a652804-bc97-480b-bb70-dc16a390f123)
+| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | Features: <br> ◈  Responsive Flexbox Layout <br> ◈  Light/Dark Mode Toggle<br> ◈  Image lightboxes <br> ◈  Github Activity Graph<br> ◈  Client Side Email Form |
+|:---:|:---|
 
 ## Project Structure
 
@@ -18,7 +17,7 @@ Here's an overview of the file hierarchy:
 .
 ├── bun.lockb             -> Dependency versioning
 ├── dist/                 -> Generated files location
-│   ├── ui/               -> Development website assets
+│   ├── ui/               -> Production assets
 │   │   ├── app.min.js    -> Minified javascript
 │   │   └── site.min.css  -> Minified style sheets
 │   └── [other files]     -> Copied from `src`
@@ -27,11 +26,12 @@ Here's an overview of the file hierarchy:
 ├── postcss.config.js     -> PostCSS configuration
 ├── README.md             -> Project documentation
 ├── src/                  -> Project source files
-│   ├── favicon.ico       -> Website icon
+│   ├── favicon.ico       -> Domain level favicon
 │   ├── humans.txt        -> Human info
 │   ├── index.html        -> Single page application
-│   ├── raw.css           -> Development style sheet
-│   └── ui/               -> Production Website assets
+│   ├── robots.txt        -> Blocks bad bots/scrapers
+│   ├── sitemap.xml       -> Sitemap for SEO
+│   └── ui/               -> Development assets
 │       ├── app.js        -> Application javascript
 │       ├── hax.woff2     -> Customized web-font
 │       ├── i/            -> Images folder
