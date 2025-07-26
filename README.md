@@ -2,8 +2,8 @@
 
 ![preview](https://github.com/user-attachments/assets/14fa73b8-9740-4aba-9219-cfa2ed0eaa71)
 
-| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | Features: <br> ◈  Responsive Flexbox Layout <br> ◈  Light/Dark Mode Toggle<br> ◈  Image lightboxes <br> ◈  Github Activity Graph<br> ◈  Client Side Email Form |
-|:---:|:---|
+| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | <h1>Functions<br>&amp; Features</h1> | ◈  Responsive Flexbox Layout w/a Modern Design<br> ◈  Light/Dark Mode Toggle w/ Matching Themes<br> ◈  Image Lightboxes w/ Keyboard Support <br> ◈ Dynamic Github Activity Graph<br> ◈ Client Side Email Form with Validation |
+|:---:|:---:|:---|
 
 ## Project Structure
 

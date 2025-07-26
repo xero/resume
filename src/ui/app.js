@@ -13,7 +13,11 @@
 		t=(i,c)=>i.classList.toggle(c),
 		to=setTimeout,
 		nt=_=>[show,hide].forEach(i=>t(i,'hidden')),
-		mo=e=>{img.src=e.dataset.img;msg.showModal()},
+		mo=(i,e)=>{
+			e.preventDefault();
+			img.src=i.href;
+			msg.showModal();
+		},
 		m=_=>{
 			const S=sm();
 			typeof e=='number'&&S&&nt();
@@ -47,7 +51,7 @@
 				return((d=Math.floor(d/x.s))+" "+x.n+(d>1?"s":"")+" ago")},
 		// Github API Parser
 		activity=_=>{
-			const A=(u,t)=>'<a target="_blank" href="'+u+'">'+t+'</a>',
+			const A=(u,t)=>'<a target="_blank" href="'+u+'" tabindex="0">'+t+'</a>',
 				M=i=>'<i class="mega '+i+'"></i>',
 				I=i=>'<span class="octicon '+i+'"></span>',
 				W=t=>'<span class="well">'+t+'</span>',
@@ -177,9 +181,9 @@
 	// Year
 	$('year').innerHTML=roman(new Date().getFullYear());
 	// Lightbox
-	$$$(".thumb").forEach(i=>{
-		add(i,_=>(mo(i)));
-		add(i,e=>{if(e.key==='Enter'||e.key===' '){mo(i)}},1)
+	$$$(".lightbox a").forEach(i=>{
+		add(i,e=>(mo(i,e)));
+		add(i,e=>{if(e.key==='Enter'||e.key===' '){mo(i,e)}},1)
 	});
 	add(msg,_=>{
 		msg.close();
