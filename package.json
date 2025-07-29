@@ -1,13 +1,13 @@
 {
   "name": "andrew.harrison.nu",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Personal Portfolio",
   "scripts": {
 		"build": "rm -rf ./dist && mkdir -p ./dist && cp -r ./src/* ./dist && bun run style && bun run script && rm -f ./dist/ui/site.css ./dist/ui/app.js",
 		"style": "postcss -o ./dist/ui/site.min.css ./src/ui/site.css; sed -i 's!tailwindcss.*com !\\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\\n!' ./dist/ui/site.min.css && bun run uncache",
 		"script": "terser ./src/ui/app.js -o ./dist/ui/app.min.js --comments -c && bun run uncache",
 		"uncache": "cp ./src/index.html ./dist/index.html && sed -i \"s/build/$(date +%s)/\" ./dist/index.html",
-		"release": "sed -i \"s!.lastmod.*lastmod.!<lastmod>$(date +%Y-%m-%d)</lastmod>!\" src/sitemap.xml; npm version patch"
+		"release": "npm version patch; sed -i \"s!.lastmod.*lastmod.!<lastmod>$(date +%Y-%m-%d)</lastmod>!\" src/sitemap.xml"
   },
   "author": "Andrew Harrison",
   "license": "CC0-1.0",
