@@ -7,7 +7,7 @@
 
 ## Project Structure
 
-The project root contains configuration files for the development and build environment, as well as, two folders.
+The project root contains configuration files for the development and build environment, as well as, two folders:
 
 - **Sources** `src/` contains the project source files, including images, fonts, [scripts](src/ui/app.js), and [style sheets](src/ui/site.css).
 - **Distribution** `dist/` (generated at build time) the complete, compiled and minified, production files.
@@ -77,6 +77,7 @@ This site is programmed with the the following tools and libraries:
 - [TailwindCSS](https://tailwindcss.com)
 - [CssNano](https://cssnano.github.io/cssnano)
 - [PostCSS](http://postcss.org)
+- [Terser](https://terser.org)
 - [Neovim](https://neovim.io)
 
 ## TailwindCSS
