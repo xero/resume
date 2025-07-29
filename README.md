@@ -1,8 +1,8 @@
 # Resume Website ⟁ **[https://Andrew.Harrison.nu](https://Andrew.Harrison.nu)**
 
-![preview](https://github.com/user-attachments/assets/14fa73b8-9740-4aba-9219-cfa2ed0eaa71)
+![preview](https://github.com/user-attachments/assets/27d33918-94f4-49fa-94bb-3358bc4edb6f)
 
-| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | <h1>Functions<br>&amp; Features</h1> | ◈  Responsive Flexbox Layout w/a Modern Design<br> ◈  Light/Dark Mode Toggle w/ Matching Themes<br> ◈  Image Lightboxes w/ Keyboard Support <br> ◈ Dynamic Github Activity Graph<br> ◈ Client Side Email Form with Validation |
+| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | <h1>Functions<br>&amp; Features</h1> | ◈  Responsive Flexbox Layout w/a Modern Design<br> ◈  Light/Dark Mode Toggle w/ Matching Themes<br> ◈  Image Lightboxes w/ Keyboard Support <br> ◈ Dynamic Github Activity Graph<br> ◈ Client Side Email Form with Validation <br> ◈ Pure SVG Interactive Skills Spider Graph |
 |:---:|:---:|:---|
 
 ## Project Structure
