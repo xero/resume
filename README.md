@@ -16,12 +16,13 @@ Here's an overview of the file hierarchy:
 ```
 .
 ├── bun.lockb             -> Dependency versioning
+├── cicd.js               -> Build scripts
 ├── dist/                 -> Generated files location
 │   ├── ui/               -> Production assets
 │   │   ├── app.min.js    -> Minified javascript
 │   │   └── site.min.css  -> Minified style sheets
 │   └── [other files]     -> Copied from `src`
-├── package.json          -> Packages and scripts
+├── package.json          -> Packages and commands
 ├── package-lock.json     -> Dependency lockfile
 ├── postcss.config.js     -> PostCSS configuration
 ├── README.md             -> Project documentation
@@ -53,7 +54,7 @@ Build the site structure with the `build` command:
 bun run build
 ```
 
-Rebuild just the css with the `style` command:
+Rebuild just the CSS with the `style` command:
 
 ```
 bun run style
@@ -73,16 +74,16 @@ bun run release
 
 This site is programmed with the the following tools and libraries:
 
-- [Bun](https://bun.sh)
-- [TailwindCSS](https://tailwindcss.com)
-- [CssNano](https://cssnano.github.io/cssnano)
-- [PostCSS](http://postcss.org)
-- [Terser](https://terser.org)
-- [Neovim](https://neovim.io)
+- [Bun](https://bun.sh): Dependency and build management
+- [PostCSS](https://postcss.org): CSS build tool-chain
+- [TailwindCSS](https://tailwindcss.com): Modern CSS framework
+- [CssNano](https://cssnano.github.io/cssnano): CSS minifier
+- [Terser](https://terser.org): Javascript minifier
+- [NeoVim](https://neovim.io): My editor of choice
 
 ## TailwindCSS
 
-I don't really like how you're intended to litter your HTML with their style attributes. My approach is to compile their classes into my own using the `@apply` keyword. This allows me to keep my DOM minimal, use my normal css logic style, and get the added benefits of tailwind and their short declarations.
+I don't really like how you're intended to litter your HTML with their utility class attributes. My approach is to compile their classes into my own using the `@apply` keyword. This allows me to keep my DOM minimal, use my normal CSS logic style, and get the added benefits of tailwind built-in responsiveness and short declarations.
 
 ## License
 

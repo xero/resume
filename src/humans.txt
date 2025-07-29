@@ -1,17 +1,37 @@
 /* humanstxt.org */
 
-/* Site */
-	standards: html5, css3, javascript
-	software: neovim, git, photoshop, fontforge
+/* Resume & Professional Portfolio */
 
-/* Designer */
-	author: Andrew Harrison
-	email: Andrew@Harrison.nu
-
-/* Personal Website */
-	site: https://andrew.harriso.nu
-	copyright: creative commons zero / public domain
-	license: http://creativecommons.org/publicdomain/zero/1.0/
+	Site: https://andrew.harriso.nu
+	Copyright: creative commons zero / public domain
+	License: http://creativecommons.org/publicdomain/zero/1.0/
    __                  __
   ( /| _  __/_ _      ( /_/_  _ _ o_ _  _
    /-|/ )(_// (/_((/   / /(_\/ / /_)(_)/ )
+
+/* Designer */
+
+	Author: Andrew Harrison
+	Email: Andrew@Harrison.nu
+
+/* Site */
+
+	Standards:
+		- HTML 5
+		- CSS 4
+		- v8 Javascript
+
+	Software:
+		- Bun: Dependency and build management
+			- https://bun.sh
+		- PostCSS: CSS build tool-chain
+			- https://postcss.org
+		- TailwindCSS: Modern CSS framework
+			- https://tailwindcss.com
+		- CssNano: CSS minifier
+			- https://cssnano.github.io/cssnano
+		- Terser: Javascript minifier
+			- https://terser.org
+		- NeoVim: My editor of choice
+			- https://neovim.io
+

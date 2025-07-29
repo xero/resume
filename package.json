@@ -1,16 +1,16 @@
 {
   "name": "andrew.harrison.nu",
-  "version": "2.1.2",
-  "description": "Personal Portfolio",
+	"author": "Andrew Harrison",
+	"description": "Resume & Personal Portfolio",
+	"license": "CC0-1.0",
+	"version": "2.2.0",
   "scripts": {
-		"build": "rm -rf ./dist && mkdir -p ./dist && cp -r ./src/* ./dist && bun run style && bun run script && rm -f ./dist/ui/site.css ./dist/ui/app.js",
-		"style": "postcss -o ./dist/ui/site.min.css ./src/ui/site.css; sed -i 's!tailwindcss.*com !\\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\\n!' ./dist/ui/site.min.css && bun run uncache",
-		"script": "terser ./src/ui/app.js -o ./dist/ui/app.min.js --comments -c && bun run uncache",
-		"uncache": "cp ./src/index.html ./dist/index.html && sed -i \"s/build/$(date +%s)/\" ./dist/index.html",
-		"release": "npm version patch; sed -i \"s!.lastmod.*lastmod.!<lastmod>$(date +%Y-%m-%d)</lastmod>!\" src/sitemap.xml"
+    "build": "bun cicd.js",
+    "style": "bun cicd.js style",
+    "script": "bun cicd.js script",
+    "uncache": "bun cicd.js uncache",
+    "release": "bun cicd.js release"
   },
-  "author": "Andrew Harrison",
-  "license": "CC0-1.0",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
     "cssnano": "^7.1.0",
