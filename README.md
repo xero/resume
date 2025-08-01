@@ -71,7 +71,8 @@ bun run release
 ```
 
 the custom [CICaDa](CICaDa.js) build script contains all the CI/CD logic using shell agnostic methods.
-plus it features some k-rad ascii art by my buddy [venam](https://https://venam.net/blog/asciiart.html)
+
+plus it features some k-rad ascii art by my buddy [venam](https://venam.net/blog/asciiart.html)
 
 ```
 ❯ bun run build
