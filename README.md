@@ -16,7 +16,7 @@ Here's an overview of the file hierarchy:
 ```
 .
 ├── bun.lockb             -> Dependency versioning
-├── cicd.js               -> Build scripts
+├── CICaDa.js             -> Build scripts
 ├── dist/                 -> Generated files location
 │   ├── ui/               -> Production assets
 │   │   ├── app.min.js    -> Minified javascript
@@ -68,6 +68,36 @@ Increment the package version and sitemap date with the `release` command:
 
 ```
 bun run release
+```
+
+the custom [CICaDa](CICaDa.js) build script contains all the CI/CD logic using shell agnostic methods. plus it features some k-rad ascii art by my buddy @venam
+
+```
+❯ bun run build
+$ bun CICaDa.js
+  ......._                                                  _.......
+.'        "-.._                                        _..-"        `.
+ ".      .' ` .`'-~-._                          _.-~-"`. ' `.   '  ."
+  ".  .         ` .   "-.      _)_.._(_      .-"   . '         .. ."
+    ". ...     .. .`.    `.   (_)    (_)   .'    .'. ..     ...  ;vnm
+      '_   '` ..      `.   \. | '____' | ./   .'      .. '`   _.'
+        "-.. '  `   ..      \'-~.__.~-'//      ..   '  ` ..-"
+            "`..          .' . '      ' . `.          ..'"
+           .'"   " .  . '    `. '.--.' .'    ` .  . "   "`.
+           "            .'   '\ \    / /`   `.            "
+            `... .. .  '    ' (,-`  '-,) `    `  . .. ...'
+                     `.  . "  (--------)  " .  .'
+                       "      (--------)      "
+                ____________  `--------'  ____________
+               |               `.____.'               |
+               |  CICaDa CI/CD  `.__.'  Build System  |
+               |                                      |
+               |     task: clean       Complete!      |
+               |     task: copy        Complete!      |
+               |     task: style       Complete!      |
+               |     task: script      Complete!      |
+               |     task: postBuild   Complete!      |
+               |______________________________________|
 ```
 
 ## Dependencies
