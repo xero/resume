@@ -1,9 +1,9 @@
 {
   "name": "andrew.harrison.nu",
-	"author": "Andrew Harrison",
-	"description": "Resume & Personal Portfolio",
-	"license": "CC0-1.0",
-	"version": "2.2.0",
+  "author": "Andrew Harrison",
+  "description": "Resume & Personal Portfolio",
+  "license": "CC0-1.0",
+  "version": "2.2.1",
   "scripts": {
     "build": "bun CICaDa.js",
     "style": "bun CICaDa.js style",
