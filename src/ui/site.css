@@ -1,11 +1,11 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *)) {
-}
+@custom-variant dark (&:where(.dark, .dark *)) {}
 @theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
   --font-sans: hax, ui-sans-serif, system-ui, sans-serif;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-white: #efefef;
   --color-polaroid: #e5e5e1;
   --color-black: #000;
@@ -28,19 +28,15 @@
   --color-minthl: #86f1e3;
   --color-moss: #065f46;
   --color-logo: rgb(0, 0, 0, 0.19);
-  --color-logodark: rgba(0, 147, 175, 0.5);
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --color-skill-mint: #25bca5;
   --color-skill-cyan: #00bad7;
   --color-skill-cyan-h: #0093af;
   --color-skill-indigo: #4169c6;
   --color-skill-purp: #6e2aa5;
-  --color-skill-bg1-light: #fcf8ed;
-  --color-skill-bg2-light: #fbf8f2;
-  --color-skill-bg3-light: #efefef;
-  --color-skill-bg1-dark: #101828;
-  --color-skill-bg2-dark: #030712;
-  --color-skill-bg3-dark: #1d293d;
+  --color-skill-bg1: #fcf8ed;
+  --color-skill-bg2: #fbf8f2;
+  --color-skill-bg3: #efefef;
   --plot-circle-border: #fff;
   --plot-polygon-border: transparent;
   --grid-stroke: #bbb;
@@ -55,8 +51,12 @@
   --color-icon-fill-hover: hsl(74 5% 10%);
 }
 .dark {
+	--color-skill-bg1: #101828;
+	--color-skill-bg2: #030712;
+	--color-skill-bg3: #1d293d;
   --color-multimint: var(--color-minthl);
   --color-multiblue: var(--color-purp);
+	--color-logo: rgba(0, 147, 175, 0.5);
   --plot-circle-border: #000;
   --center-label-bg: #111;
   --grid-stroke: #444;
@@ -235,7 +235,7 @@
     @apply text-4xl md:text-5xl;
   }
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl 3xl:text-5xl;
   }
   h3 {
     @apply text-2xl md:text-3xl;
@@ -352,9 +352,6 @@
   #loyal::before {
     @apply text-logo;
   }
-  .dark main #jobs .lcol i::before {
-    @apply text-logodark!;
-  }
   #bb::before {
     content: "\f0cf3";
   }
@@ -463,11 +460,14 @@
 		mr-3;
   }
   .spiderchart {
-    @apply aspect-square;
+    @apply
+				max-w-[600px]
+				max-h-[600px];
     svg {
-      @apply w-full
+      @apply block
+				aspect-square
+				w-full
 				h-full
-				block
 				bg-none;
       g {
         @apply pointer-events-auto;
@@ -721,7 +721,8 @@
 				h-[inherit]
 				lg:w-1/2
 				lg:float-left
-				2xl:text-lg;
+				2xl:text-lg
+				3xl:text-2xl;
       }
 			aside {
 				@apply
@@ -776,22 +777,19 @@
 					lg:float-right;
 				svg#rmu {
 					@apply block
-					w-[55%]
 					mt-6
 					ml-6
 					lg:mt-0
 					lg:ml-0
-					md:w-[37%]
-					lg:w-[80%]
-					xl:w-[66%]
-					h-auto;
+					aspect-square
+					max-w-[200px]
+					3xl:max-w-[300px];
 				}
 			}
 		}
     #madskills {
       em {
         @apply py-3
-				text-[17px]
 				block;
         i {
           @apply inline-block
@@ -830,12 +828,9 @@
       }
       .inner {
         @apply bg-gradient-to-br
-				bg-skill-bg1-light
-				from-skill-bg2-light
-				to-skill-bg3-light
-				dark:bg-skill-bg1-light
-				dark:from-skill-bg2-dark
-				dark:to-skill-bg3-dark
+				bg-skill-bg1
+				from-skill-bg2
+				to-skill-bg3
 				border
 				rounded-lg
 				p-4
@@ -865,10 +860,10 @@
         }
       }
       .icon {
-        @apply w-10
+        @apply flex
+				w-10
 				h-10
 				rounded
-				flex
 				items-center
 				justify-center
 				mr-3
@@ -877,6 +872,8 @@
       .title {
         @apply font-medium
 				text-lg
+				lg:text-xl
+				3xl:text-3xl
 				transition-colors;
       }
       .desc {
@@ -995,6 +992,7 @@
         strong {
           @apply block
 					text-xl
+					3xl:text-2xl
 					mt-0
 					ml-30;
         }
@@ -1027,18 +1025,25 @@
             @apply inline-block
 						w-1/6
 						max-w-1/6
+						2xl:w-1/12
+						2xl:max-w-1/12
 						text-left
 						align-top;
           }
           .log {
             @apply inline-block
 						max-w-5/6
-						w-5/6;
+						w-5/6
+						2xl:pl-8
+						2xl:w-11/12
+						2xl:max-w-11/12;
           }
           .log,
           .log * {
             @apply text-sm
-						md:text-base;
+						md:text-base
+						lg:text-lg
+						2xl:text-2xl;
           }
         }
         p {
@@ -1127,6 +1132,8 @@
 					text-left
 					text-base
 					lg:text-xl
+					2xl:text-2xl
+					3xl:text-3xl
 					text-midnight
 					dark:text-white;
           word-spacing: -5px;
@@ -1144,6 +1151,7 @@
         }
       }
     }
+		/* --------------------- globals -------------------------- */
     p {
       @apply my-3;
     }
@@ -1191,6 +1199,18 @@
         @apply mr-2;
       }
     }
+		p,
+		li,
+		strong,
+		em,
+		button,
+		textarea,
+		input {
+			@apply text-base
+			xl:text-lg
+			2xl:text-xl
+			3xl:text-2xl;
+		}
     header,
     footer {
       @apply w-full
@@ -1269,6 +1289,8 @@
   nav {
     @apply fixed
 		w-64
+		2xl:w-80
+		3xl:w-96
 		md:min-h-[860px]
 		h-full
 		z-50
@@ -1328,6 +1350,8 @@
 							dark:shadow-[0_0_10px_10px_var(--glow-cyan)];
               &::before {
                 @apply translate-x-[300px]
+                2xl:translate-x-[375px]
+                3xl:translate-x-[440px]
 								transition-transform
 								ease-out;
               }
@@ -1375,6 +1399,8 @@
 								dark:text-cyan
 								text-left
 								text-lg
+								2xl:text-2xl
+								3xl:text-3xl
 								block
 								w-full
 								h-full
