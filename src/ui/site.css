@@ -195,8 +195,8 @@
 		dark:text-white
 		rounded-lg
 		w-full
-		2xl:w-2/3
-		2xl:self-end;
+		2xl:w-3/4
+		2xl:self-center;
     &:not(:placeholder-shown):invalid {
       @apply border-3
 			border-red-400
@@ -596,9 +596,10 @@
     inline-size: var(--size);
     touch-action: manipulation;
     transition: transform 1s linear !important;
-    @apply p-0
+    @apply bg-none
+			p-0
+			md:mt-9
 			inline-block
-			bg-none
 			cursor-pointer
 			aspect-square;
     &:focus,
@@ -1002,7 +1003,8 @@
 			img {
 				@apply pt-1 pb-3
 				w-full
-				lg:w-[80%];
+				lg:w-[80%]
+				3xl:w-[60%];
 			}
       #loadact {
         @apply w-[96%]
@@ -1124,7 +1126,6 @@
         .row {
           @apply h-9
 					mt-4
-					ml-6
 					p-2
 					md:ml-1
 					mb-2
@@ -1140,7 +1141,9 @@
           &::before {
             @apply contents
 						text-mint
-						text-2xl;
+						text-2xl
+						2xl:text-3xl
+						3xl:text-4xl;
           }
         }
         form {
@@ -1151,7 +1154,6 @@
         }
       }
     }
-		/* --------------------- globals -------------------------- */
     p {
       @apply my-3;
     }
@@ -1420,6 +1422,8 @@
 						pt-3
 						font-normal
 						text-lg
+						2xl:text-xl
+						3xl:text-2xl
 						w-full
 						text-black
 						dark:text-white;
