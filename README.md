@@ -2,7 +2,7 @@
 
 ![preview](https://github.com/user-attachments/assets/27d33918-94f4-49fa-94bb-3358bc4edb6f)
 
-| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | <h1>Functions<br>&amp; Features</h1> | ◈  Responsive Flexbox Layout w/a Modern Design<br> ◈  Light/Dark Mode Toggle w/ Matching Themes<br> ◈  Image Lightboxes w/ Keyboard Support <br> ◈ Dynamic Github Activity Graph<br> ◈ Client Side Email Form with Validation <br> ◈ Pure SVG Interactive Skills Spider Graph |
+| ![ah logo](https://raw.githubusercontent.com/xero/resume/refs/heads/main/src/ui/i/logo.png) | <h1>Functions<br>&amp; Features</h1> | ◈  Responsive Flexbox Layout w/a Modern Design <br> ◈  Light/Dark Mode Toggle w/ Matching Themes <br> ◈ Pure SVG Interactive Skills Spider Graph <br> ◈  Image Lightboxes w/ Keyboard Support <br> ◈ Dynamic Github Activity Graph <br> ◈ Client Side Email Form with Validation |
 |:---:|:---:|:---|
 
 ## Project Structure
@@ -42,7 +42,7 @@ Here's an overview of the file hierarchy:
 
 ## Building
 
-Clone the repo and install it's dependencies using `bun` or `npm`:
+Clone the repo and install it's dependencies using `bun`:
 
 ```
 bun i
@@ -70,7 +70,8 @@ Increment the package version and sitemap date with the `release` command:
 bun run release
 ```
 
-the custom [CICaDa](CICaDa.js) build script contains all the CI/CD logic using shell agnostic methods. plus it features some k-rad ascii art by my buddy @venam
+the custom [CICaDa](CICaDa.js) build script contains all the CI/CD logic using shell agnostic methods.
+plus it features some k-rad ascii art by my buddy [venam](https://https://venam.net/blog/asciiart.html)
 
 ```
 ❯ bun run build
@@ -81,7 +82,7 @@ $ bun CICaDa.js
   ".  .         ` .   "-.      _)_.._(_      .-"   . '         .. ."
     ". ...     .. .`.    `.   (_)    (_)   .'    .'. ..     ...  ;vnm
       '_   '` ..      `.   \. | '____' | ./   .'      .. '`   _.'
-        "-.. '  `   ..      \'-~.__.~-'//      ..   '  ` ..-"
+        "-.. '  `   ..      \\'-~.__.~-'//      ..   '  ` ..-"
             "`..          .' . '      ' . `.          ..'"
            .'"   " .  . '    `. '.--.' .'    ` .  . "   "`.
            "            .'   '\ \    / /`   `.            "
