@@ -41,17 +41,6 @@ const
 			break;
 		}
 	},
-	run=async(cmd)=>{
-		try {
-			const r = await cmd;
-			return r;
-		} catch (e) {
-			if (e && typeof e.message === "string" && e.message.startsWith("Error:")) {
-				throw e;
-			}
-			throw new Error(e.stderr || e.stdout || e.message || "Command failed");
-		}
-	},
 	clean=async _=>{
 		await $`rm -rf ./dist`;
 		await $`mkdir -p ./dist`;
@@ -60,27 +49,27 @@ const
 		await $`cp -r ./src/* ./dist`;
 	},
 	style=async _=>{
-		await run($`postcss -o ./dist/ui/site.min.css ./src/ui/site.css`);
-		let css = await readFile("./dist/ui/site.min.css", "utf8");
-		if (!css || css.trim().length === 0) {
+		await $`postcss -o ./dist/ui/site.min.css ./src/ui/site.css`;
+		let css=await readFile("./dist/ui/site.min.css", "utf8");
+		if (!css || css.trim().length===0) {
 			throw new Error("PostCSS failed");
 		}
-		css = css.replace("tailwindcss v4.1.11 | MIT License | https://tailwindcss.com",`\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\n`);
+		css=css.replace("tailwindcss v4.1.11 | MIT License | https://tailwindcss.com",`\n┳━┓┏┓┓┳━┓┳━┓┳━━┓ ┳  ┳ ┳┳━┓┳━┓┳━┓o┓━┓┏━┓┏┓┓\n┃━┫┃┃┃┃ ┃┃┳┛┣━ ┃┃┃  ┃━┫┃━┫┃┳┛┃┳┛┃┗━┓┃ ┃┃┃┃\n┇ ┗┛┗┛┗━┛┛┗━┻━┛┗┻┛  ┇ ┗┛ ┗┛┗━┛┗━┇━━┛┛━┛┛┗┛\n`);
 		await writeFile("./dist/ui/site.min.css", css);
 		await uncache();
 	},
 	script=async _=>{
 		await $`terser ./src/ui/app.js -o ./dist/ui/app.min.js --comments -c`;
-		let js= await readFile("./dist/ui/app.min.css", "utf8");
-		if (!js|| js.trim().length === 0) {
+		let js=await readFile("./dist/ui/app.min.js", "utf8");
+		if (!js || js.trim().length===0) {
 			throw new Error("Terser failed");
 		}
 		await uncache();
 	},
 	uncache=async _=>{
 		await $`cp ./src/index.html ./dist/index.html`;
-		let indexHtml = await readFile("./dist/index.html", "utf8");
-		indexHtml = indexHtml.replace(/build/g, `${Math.floor(Date.now() / 1000)}`);
+		let indexHtml=await readFile("./dist/index.html", "utf8");
+		indexHtml=indexHtml.replace(/build/g, `${Math.floor(Date.now() / 1000)}`);
 		await writeFile("./dist/index.html", indexHtml);
 	},
 	postBuild=async _=>{
@@ -95,10 +84,10 @@ const
 			process.exit(1);
 		}
 		await $`npm version patch`;
-		const sitemapPath = "src/sitemap.xml";
-		let sitemap = await readFile(sitemapPath, "utf8");
-		const today = new Date().toISOString().slice(0, 10);
-		sitemap = sitemap.replace(
+		const sitemapPath="src/sitemap.xml";
+		let sitemap=await readFile(sitemapPath, "utf8");
+		const today=new Date().toISOString().slice(0, 10);
+		sitemap=sitemap.replace(
 			/<lastmod>.*<\/lastmod>/,
 			`<lastmod>${today}</lastmod>`
 		);
